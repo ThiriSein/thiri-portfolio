@@ -1,18 +1,50 @@
 import Image from "next/image";
+import { PortfolioHero } from "./pages/portfolioHero";
 
 const skills = [
-  { category: "Programming", items: ["Python", "SQL", "Git"] },
   {
-    category: "Data Analysis",
-    items: ["Pandas", "NumPy", "Matplotlib", "Seaborn"],
+    category: "Programming Languages",
+    items: ["Python", "SQL", "JavaScript", "TypeScript", "PHP", "Kotlin"],
   },
   {
-    category: "Machine Learning",
-    items: ["Scikit-learn", "Regression", "Random Forest", "Model Evaluation"],
+    category: "Web & Mobile Development",
+    items: [
+      "React",
+      "Next.js",
+      "React Native",
+      "Laravel",
+      "Tailwind CSS",
+      "Bootstrap",
+    ],
   },
   {
-    category: "Tools",
-    items: ["Jupyter Notebook", "VS Code", "GitLab", "GitHub"],
+    category: "Databases & Backend Services",
+    items: ["MySQL", "SQLite", "MongoDB", "Firebase"],
+  },
+  {
+    category: "Data Analysis & Visualisation",
+    items: [
+      "pandas",
+      "NumPy",
+      "Exploratory Data Analysis",
+      "Matplotlib",
+      "Seaborn",
+    ],
+  },
+  {
+    category: "Machine Learning & Forecasting",
+    items: [
+      "scikit-learn",
+      "Feature Engineering",
+      "Ridge Regression",
+      "Random Forest",
+      "Time-Series Validation",
+      "Model Evaluation",
+    ],
+  },
+  {
+    category: "Version Control & Deployment",
+    items: ["Git", "GitHub", "GitLab", "Docker", "Vercel"],
   },
 ];
 
@@ -42,44 +74,18 @@ export default function Home() {
     <main>
       <header className="nav">
         <a href="#home" className="logo">
-          THIRI<span>.</span>
+          THIRI SEIN<span>.</span>
         </a>
         <nav>
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
 
-      <section id="home" className="hero">
-        <div className="container hero-content">
-          <div className="eyebrow">
-            <span className="status-dot" /> WELCOME TO MY PORTFOLIO
-          </div>
-          <h1>
-            Hi, I'm <span>Thiri Sein.</span>
-          </h1>
-          <h2>Data Science &amp; Machine Learning</h2>
-          <p>
-            I explore data, build predictive models and turn complex information
-            into meaningful insights. Welcome to my collection of projects,
-            skills and learning experiences.
-          </p>
-          <div className="actions">
-            <a href="#projects" className="btn primary">
-              Explore My Work ↗
-            </a>
-            <a href="#contact" className="btn outline">
-              Get In Touch →
-            </a>
-          </div>
-          <div className="hero-detail">
-            PYTHON <span>✦</span> MACHINE LEARNING <span>✦</span> DATA ANALYTICS
-          </div>
-        </div>
-        <div className="hero-glow" />
-      </section>
+      <PortfolioHero />
 
       <section id="about" className="section light">
         <div className="container about-grid">
@@ -91,18 +97,24 @@ export default function Home() {
           </div>
           <div className="about-text">
             <p>
-              I'm Thiri, with a postgraduate background at the University of the
-              West of England (UWE Bristol) and a strong interest in data
-              science, predictive modelling and real-world analytics.
+              I’m a curious, organised problem solver with over two years of
+              experience in the software industry. Advising businesses taught me
+              to start with a simple question: what are we trying to achieve?
+              That helps me focus on work that can make a practical difference.
             </p>
             <p>
-              My academic work includes investigating London's housing market
-              through machine learning, statistical analysis and time-aware
-              forecasting techniques.
+              I identify with the ENTJ personality type, especially the habit of
+              planning ahead and taking initiative. I tackle complex problems by
+              breaking them into smaller questions, testing my assumptions, and
+              letting the evidence guide my decisions. In teams, I help organise
+              the work, listen to different perspectives, and explain technical
+              findings in plain language. I welcome feedback and take time to
+              reflect on what worked and what I could do better next time.
             </p>
             <p>
-              I enjoy understanding not just how a model performs, but why it
-              performs that way and how its results can be communicated clearly.
+              I’m also interested in risk management and entrepreneurship,
+              particularly how businesses recognise opportunities and weigh
+              trade-offs when information is incomplete.
             </p>
           </div>
         </div>
@@ -115,8 +127,8 @@ export default function Home() {
             Technical <span>skills.</span>
           </h2>
           <p className="section-intro">
-            Technologies and methods I use to explore data and develop
-            solutions.
+            Technologies and methods I use to build web and mobile apps, analyse
+            data, and develop predictive models.
           </p>
           <div className="skills-grid">
             {skills.map((group) => (
@@ -190,16 +202,29 @@ export default function Home() {
             from you.
           </p>
           <div className="actions">
-            <a href="mailto:YOUR_EMAIL@example.com" className="btn primary">
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=thirisein24%40gmail.com&su=Portfolio%20inquiry"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn primary"
+            >
               Email Me ↗
             </a>
             <a
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/thiri-sein/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn outline"
             >
               LinkedIn ↗
+            </a>
+            <a
+              href="https://github.com/ThiriSein"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn primary"
+            >
+              GitHub ↗
             </a>
           </div>
         </div>
@@ -208,7 +233,7 @@ export default function Home() {
       <footer className="footer">
         <div className="container footer-inner">
           <strong>
-            THIRI<span>.</span>
+            THIRI SEIN<span>.</span>
           </strong>
           <p>© 2026 Thiri Sein. Built with Next.js.</p>
           <a href="#home">Back to Top ↑</a>

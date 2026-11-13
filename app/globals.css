@@ -176,6 +176,16 @@ a {
   background: #3b82f6;
 }
 
+.secondary {
+  background: white;
+  color: #07152f;
+}
+
+.secondary:hover {
+  background: #f0f5ff;
+    color: #07152f;
+}
+
 .outline {
   border: 1px solid #7fa4df;
   color: white;
@@ -203,6 +213,83 @@ a {
   opacity: .13;
   filter: blur(90px);
   pointer-events: none;
+}
+
+.hero > .hero-content {
+  display: grid;
+  align-items: center;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+.hero-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.hero-card {
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+  border: 1px solid #dbeafe;
+  background: #f5f7ff;
+  color: var(--navy);
+  border-radius: 1.25rem;
+}
+
+.hero-card--wide {
+  padding: clamp(1.5rem, 3vw, 2rem);
+  background: linear-gradient(135deg, #f5f8ff, #e8e6ff);
+  grid-column: 1 / -1;
+}
+
+.hero-card h3 {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.hero .hero-card p {
+  line-height: 1.5;
+  margin: 0.5rem 0 0;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.hero-card-tools {
+  display: grid;
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.hero-card-tools li {
+  padding: 0.6rem 0.75rem;
+  background: var(--white);
+  color: #414b8a;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 0.65rem;
+}
+
+ #home .hero-card-tools {
+  padding-inline-start: 1.25rem;
+  list-style-type: "◆  ";
+}
+
+#home .hero-card-tools li {
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+  color: #172541;
+  border-radius: 0;
+}
+
+#home .hero-card-tools li::marker {
+  color: #5341a8;
+  font-size: 0.75em;
 }
 
 /* General sections */
@@ -253,6 +340,7 @@ a {
   color: #475569;
   font-size: 16px;
 }
+
 
 /* Skills */
 .skills-grid {
@@ -421,6 +509,10 @@ a {
 
 /* Mobile */
 @media (max-width: 768px) {
+  .hero > .hero-content {
+    grid-template-columns: 1fr;
+  }
+
   .nav {
     flex-wrap: wrap;
     height: auto;
@@ -485,5 +577,11 @@ a {
   .skill-card,
   .project-card {
     transition: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-cards {
+    grid-template-columns: 1fr;
   }
 }
