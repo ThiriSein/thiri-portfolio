@@ -1,3 +1,5 @@
+import ActionLink from "../components/ActionLink";
+
 export function PortfolioHero() {
   return (
     <section id="home" className="hero">
@@ -60,15 +62,17 @@ export function PortfolioHero() {
             answer business questions, and help teams make informed decisions.
           </p>
           <div className="actions">
-            <a href="#projects" className="btn primary">
-              Explore My Work ↗
-            </a>
-            <a href="#contact" className="btn outline">
-              Get In Touch ↗
-            </a>
-            <a href="#contact" className="btn secondary">
-              View CV ↗
-            </a>
+            <ActionLink
+              href="#projects"
+              label="Explore My Work"
+              variant="primary"
+            />
+            <ActionLink
+              href="#contact"
+              label="Get In Touch"
+              variant="outline"
+            />
+            <ActionLink href="#contact" label="View CV" variant="secondary" />
           </div>
           <div className="hero-detail">
             DATA SCIENCE <span>✦</span> MACHINE LEARNING <span>✦</span> SOFTWARE

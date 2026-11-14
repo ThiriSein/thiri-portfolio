@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { PortfolioHero } from "./pages/portfolioHero";
+import ActionLink from "./components/ActionLink";
 
 const skills = [
   {
@@ -81,6 +82,7 @@ export default function Home() {
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
           <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
@@ -191,9 +193,48 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="experience" className="section pale">
+        <div className="container">
+          <div className="section-label">04 / My Experience</div>
+          <h2 className="section-heading">
+            Professional <span>Experience.</span>
+          </h2>
+          <p className="section-intro">
+            {/*Technologies and methods I use to build web and mobile apps, analyse
+            data, and develop predictive models.*/}
+          </p>
+          <div className="skills-grid"></div>
+        </div>
+      </section>
+
+      <section id="education" className="section light">
+        <div className="container">
+          <div className="section-label">05 / My Education</div>
+          <h2 className="section-heading">
+            Education and <span> Certificates.</span>
+          </h2>
+          <h2>
+            <b>MSc Data Science</b>
+          </h2>
+          <p className="section-intro">
+            University of West of England, Bristol (UWE)
+          </p>
+          <h2>
+            <b>BSc Computer Science</b>
+          </h2>
+          <p className="section-intro">
+            University of Computer Studies, Yangon (UCSY)
+          </p>
+          <h2>
+            <b>Diploma in Business Management and Entrepreneurship</b>
+          </h2>
+          <p className="section-intro">Strategy First International College</p>
+        </div>
+      </section>
+
       <section id="contact" className="section contact">
         <div className="container">
-          <div className="section-label">04 / LET'S CONNECT</div>
+          <div className="section-label">06 / LET'S CONNECT</div>
           <h2>
             Let's build something <span>meaningful.</span>
           </h2>
@@ -202,30 +243,24 @@ export default function Home() {
             from you.
           </p>
           <div className="actions">
-            <a
+            <ActionLink
               href="https://mail.google.com/mail/?view=cm&fs=1&to=thirisein24%40gmail.com&su=Portfolio%20inquiry"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn primary"
-            >
-              Email Me ↗
-            </a>
-            <a
+              label="Email Me"
+              variant="primary"
+              openTab
+            />
+            <ActionLink
               href="https://www.linkedin.com/in/thiri-sein/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn outline"
-            >
-              LinkedIn ↗
-            </a>
-            <a
+              label="LinkedIn"
+              variant="outline"
+              openTab
+            />
+            <ActionLink
               href="https://github.com/ThiriSein"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn primary"
-            >
-              GitHub ↗
-            </a>
+              label="GitHub"
+              variant="secondary"
+              openTab
+            />
           </div>
         </div>
       </section>
